@@ -1,0 +1,15 @@
+python-dotenv
+
+numpy
+pandas
+matplotlib
+seaborn
+
+sklearn
+catboost
+xgboost
+
+flask
+dill
+
+-e.
