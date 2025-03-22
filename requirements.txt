@@ -1,15 +1,20 @@
 python-dotenv
+certifi
+
+pymongo
 
 numpy
 pandas
+
 matplotlib
 seaborn
 
-sklearn
+scikit-learn
 catboost
 xgboost
+
 
 flask
 dill
 
--e.
+-e .
