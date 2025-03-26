@@ -5,7 +5,7 @@ import logging
 
 LOG_FILE = f"{datetime.now().strftime('%m-%d-%Y %H-%M-%S')}.log"
 
-logs_path = os.path.join(os.getcwd(), "logs", datetime.now().strftime('%Y-%m-%d'))
+logs_path = os.path.join(os.getcwd(), "logs", datetime.now().strftime('%m-%d-%Y'))
 
 os.makedirs(logs_path, exist_ok=True)
 
