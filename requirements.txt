@@ -2,7 +2,7 @@ python-dotenv
 certifi
 
 pymongo
-pymongo[srv] == 3.6
+pymongo[srv] == 3.12
 
 numpy
 pandas
@@ -17,5 +17,6 @@ xgboost
 
 flask
 dill
+pyaml
 
-#-e .
+-e .
