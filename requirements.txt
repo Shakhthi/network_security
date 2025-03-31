@@ -19,4 +19,6 @@ flask
 dill
 pyaml
 
+mlflow
+
 -e .

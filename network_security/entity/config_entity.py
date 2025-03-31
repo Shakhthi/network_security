@@ -87,22 +87,3 @@ class ModelTrainerConfig:
         )
         self.expected_accuracy: float = training_pipeline.MODEL_TRAINER_EXPECTED_SCORE
         self.overfitting_underfitting_threshold = training_pipeline.MODEL_TRAINER_OVER_FIITING_UNDER_FITTING_THRESHOLD
-        
-
-if __name__ == "__main__":
-    training_pipeline_config = TrainingPipelineConfig()
-    data_ingestion_config = DataIngestionConfig(training_pipeline_config)
-
-    
-    print(f"Data Ingestion Directory: {data_ingestion_config.data_ingestion_dir}")
-    print(f"Feature Store File Path: {data_ingestion_config.feature_store_file_path}")
-    print(f"Training File Path: {data_ingestion_config.training_file_path}")
-    print(f"Testing File Path: {data_ingestion_config.testing_file_path}")
-    print(f"Train-Test Split Ratio: {data_ingestion_config.train_test_split_ratio}")
-    print(f"Collection Name: {data_ingestion_config.collection_name}")
-    print(f"Database Name: {data_ingestion_config.database_name}")
-    print(f"Pipeline Name: {training_pipeline_config.pipeline_name}")
-    print(f"Artifact Name: {training_pipeline_config.artifact_name}")
-    print(f"Artifact Directory: {training_pipeline_config.artifact_dir}")
-    print(f"Model Directory: {training_pipeline_config.model_dir}")
-    print(f"Timestamp: {training_pipeline_config.timestamp}")

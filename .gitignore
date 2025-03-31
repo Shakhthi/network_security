@@ -1,5 +1,7 @@
 # Folders i dont want to push to git
 Artifacts/
+mlruns/
+final_model/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
