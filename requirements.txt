@@ -20,5 +20,5 @@ dill
 pyaml
 
 mlflow
-
+dagshub
 -e .

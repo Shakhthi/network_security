@@ -25,6 +25,8 @@ from sklearn.ensemble import (
 )
 
 import mlflow
+import dagshub
+dagshub.init(repo_owner='Shakhthi', repo_name='network_security', mlflow=True)
 
 class ModelTrainer:
     def __init__(self, 
@@ -121,6 +123,7 @@ class ModelTrainer:
 
             Network_Model=NetworkModel(preprocessor=preprocessor,model=best_model)
             save_object(self.model_trainer_config.trained_model_file_path, obj=NetworkModel)
+            
             #model pusher
             save_object("final_model/model.pkl",best_model)
             
