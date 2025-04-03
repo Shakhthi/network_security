@@ -3,7 +3,7 @@ from datetime import datetime
 
 import logging
 
-LOG_FILE = f"{datetime.now().strftime('%m-%d-%Y %H-%M-%S')}.log"
+LOG_FILE = f"{datetime.now().strftime('%m-%d-%Y_%H-%M-%S')}.log"
 
 logs_path = os.path.join(os.getcwd(), "logs", datetime.now().strftime('%m-%d-%Y'))
 
