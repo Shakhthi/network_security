@@ -1,11 +1,10 @@
 name: workflow
-
 on:
   push:
-      branches:
-        - main
-      paths-ignore:
-        - 'README..md'
+    branches:
+      - main
+    paths-ignore:
+      - 'README..md'
 
 jobs:
   integretion:
