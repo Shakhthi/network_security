@@ -2,6 +2,7 @@
 Artifacts/
 mlruns/
 final_model/
+AWS_setup.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
