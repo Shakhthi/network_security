@@ -4,7 +4,8 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'README..md'
+      - 'README.md'
+  workflow_dispatch: # Add this to enable manual triggering
 
 jobs:
   integretion:
@@ -15,10 +16,11 @@ jobs:
           uses: actions/checkout@v3
 
         - name: Lint code
-          uses: echo "Linting repository"
+          run: echo "Linting repository"
 
         - name: Run Unit tests
-          uses: echo "Running unit tests"
+          run: echo "Running unit tests"
+
   build-and-push-ecr-image:
       name: Continous Delivery
       needs: integretion
@@ -53,8 +55,8 @@ jobs:
             # push it to ECR so that it can
             # be deployed to ECS
             docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-            docker push $ECR_REGISTRY/$ECR_REPOSITORY:IMAGE_TAG
-            echo "::set-output name=image::$ECR_REGISTRY/ECR_REPOSITORY:$IMAGE_TAG"
-            
+            docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+            echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG"
+
 
 
